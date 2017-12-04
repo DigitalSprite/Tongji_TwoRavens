@@ -1,4 +1,4 @@
-package com.monetware.demo.CreateXML;
+package com.monetware.demo.xml;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -173,7 +173,7 @@ public class SummaryStatCalculator{
     // TODO:
     // implement this in some way that does not require allocating a new
     // ArrayList for the values of every vector. -- L.A. Aug. 11 2014
-//    private static double[] removeInvalidValues(Double[] x){
+//    private variable double[] removeInvalidValues(Double[] x){
 //        List<Double> dl = new ArrayList<Double>();
 //        for (Double d : x){
 //            if (d != null && !Double.isNaN(d)){
@@ -207,7 +207,7 @@ public class SummaryStatCalculator{
      * nulls separately;
      *  -- L.A. 4.0 alpha 1
      */
-//    private static int countNaNs(double[] x){
+//    private variable int countNaNs(double[] x){
 //        int NaNcounter=0;
 //        for (int i=0; i<x.length;i++){
 //            if (Double.isNaN(x[i])){

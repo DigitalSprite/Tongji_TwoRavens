@@ -1,24 +1,30 @@
-package com.monetware.demo.Controller;
+package com.monetware.demo.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import com.monetware.demo.CreateXML.*;
+import com.monetware.demo.xml.*;
 
 @RestController
 @RequestMapping("/create")
-public class XMLController {
+public class CreationController {
 
     @GetMapping("/xml")
     public String GenerateXML(@RequestParam(value = "name", defaultValue = "test") String name){
+        String response = "success";
         try{
             CreateXML xml = new CreateXML();
-            xml.CreateFile(name);
+            response = xml.CreateFile(name);
 
         }catch (Exception e){
-            return "Create Error!";
+            response = "No such a file!";
         }
+        return response;
+    }
+
+    @GetMapping("/prep")
+    public String GeneratePREP(@RequestParam(value = "name", defaultValue = "test")String name){
         return "Success!";
     }
 }

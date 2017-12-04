@@ -1,4 +1,4 @@
-package com.monetware.demo.CreateXML;
+package com.monetware.demo.xml;
 
 import javax.xml.stream.XMLOutputFactory;
 import javax.xml.stream.XMLStreamException;
